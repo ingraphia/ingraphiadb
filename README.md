@@ -1,1 +1,1 @@
-# IngraphiaDB
+# InGraphiaDB

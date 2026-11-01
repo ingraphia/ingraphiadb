@@ -13,6 +13,7 @@
 // limitations under the License.
 
 mod csr;
+mod lsmgraph;
 mod memgraph;
 mod multi_index;
 mod vcs;

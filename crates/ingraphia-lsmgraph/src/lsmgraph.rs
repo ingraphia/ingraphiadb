@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+use std::sync::Arc;
+
 /// ### Log-Structured Merge-graph (LSMGraph)
 ///
 /// Consists of 4 blocks:
@@ -23,4 +25,23 @@
 /// For further details, see [article](https://arxiv.org/pdf/2411.06392).
 pub struct LSMGraph {
 
+}
+
+#[allow(dead_code)]
+impl LSMGraph {
+
+    pub fn new() -> Arc<Self> {
+        Arc::new(Self {})
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn new_lsmgraph_instance() {
+        let lsm: Arc<LSMGraph> = LSMGraph::new();
+        assert!(Arc::strong_count(&lsm) == 1);
+    }
 }
